@@ -45,7 +45,7 @@ public class Main implements Client{
 	}
 	
 	@Override
-	public boolean tryToCloseApplication(boolean success){
+	public boolean canApplicationBeClosed(boolean success){
 		
 		boolean closeApplication = false;
 		
