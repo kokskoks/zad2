@@ -13,6 +13,8 @@ public class Main implements Client{
 		
 		Client client = new Main();
 		
+		String[] info = client.getInfo();
+		
 	}
 
 	public void setCallback(QuestionCallback callback) {
