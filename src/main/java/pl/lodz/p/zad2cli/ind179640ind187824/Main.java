@@ -13,6 +13,6 @@ public class Main implements CallbackInjectable{
 
 	public void setCallback(QuestionCallback callback) {
 		
-		
+		this.callback = callback;
 	}
 }
