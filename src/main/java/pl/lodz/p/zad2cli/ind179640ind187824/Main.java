@@ -22,6 +22,8 @@ public class Main implements Client{
 		
 		boolean success = Root.saveFile(info[0], info[1], info[2]);
 		
+		
+		
 	}
 
 	public void setCallback(QuestionCallback callback) {
@@ -40,6 +42,11 @@ public class Main implements Client{
 		System.out.println("Podaj niepoprawny string:");
 		data[2] = scanner.nextLine();
 		return data;
+	}
+	
+	public boolean tryToCloseApplication(){
+		
+		return false;
 	}
 
 }
