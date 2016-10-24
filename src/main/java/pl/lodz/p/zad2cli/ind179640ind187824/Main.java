@@ -11,8 +11,8 @@ public class Main implements CallbackInjectable{
 		
 	}
 
-	public void setCallback(QuestionCallback arg0) {
-		// TODO Auto-generated method stub
+	public void setCallback(QuestionCallback callback) {
+		
 		
 	}
 }
