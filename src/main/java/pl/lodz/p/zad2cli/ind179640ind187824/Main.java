@@ -45,9 +45,15 @@ public class Main implements Client{
 	}
 	
 	@Override
-	public boolean tryToCloseApplication(){
+	public boolean tryToCloseApplication(boolean success){
 		
-		return false;
+		boolean closeApplication = false;
+		
+		if(callback!=null){
+			closeApplication = !callback.doRetry(success);
+		}
+		
+		return closeApplication;
 	}
 
 }

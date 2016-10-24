@@ -5,5 +5,5 @@ import pl.lodz.p.zad2.ind179640ind187824.CallbackInjectable;
 public interface Client extends CallbackInjectable{
 	String[] getInfo();
 
-	boolean tryToCloseApplication();
+	boolean tryToCloseApplication(boolean success);
 }
