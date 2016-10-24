@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import pl.lodz.p.zad2.ind179640ind187824.CallbackInjectable;
 import pl.lodz.p.zad2.ind179640ind187824.QuestionCallback;
+import pl.lodz.p.zad2.ind179640ind187824.Root;
 
 public class Main implements Client{
 	
@@ -14,6 +15,9 @@ public class Main implements Client{
 		Client client = new Main();
 		
 		String[] info = client.getInfo();
+		
+		QuestionCallback clbck = Root.getQuestionCallback();
+		
 		
 	}
 
