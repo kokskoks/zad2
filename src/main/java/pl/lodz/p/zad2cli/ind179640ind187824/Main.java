@@ -18,6 +18,9 @@ public class Main implements Client{
 		
 		QuestionCallback clbck = Root.getQuestionCallback();
 		
+		Root.getCallbackInjector().inject(clbck, client);
+		
+		
 		
 	}
 
