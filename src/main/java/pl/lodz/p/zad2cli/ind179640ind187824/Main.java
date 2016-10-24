@@ -5,7 +5,7 @@ import java.util.Scanner;
 import pl.lodz.p.zad2.ind179640ind187824.CallbackInjectable;
 import pl.lodz.p.zad2.ind179640ind187824.QuestionCallback;
 
-public class Main implements CallbackInjectable{
+public class Main implements CallbackInjectable, Client{
 	
 	private QuestionCallback callback;
 	
@@ -17,8 +17,11 @@ public class Main implements CallbackInjectable{
 		
 		this.callback = callback;
 	}
-	
+
+	@Override
 	public String[] getInfo() {
+		// TODO Auto-generated method stub
 		return null;
 	}
+
 }
