@@ -14,15 +14,18 @@ public class Main implements Client{
 		
 		Client client = new Main();
 		
-		String[] info = client.getInfo();
+		boolean success = false;
 		
-		QuestionCallback clbck = Root.getQuestionCallback();
+		do {
+			String[] info = client.getInfo();
+			
+			QuestionCallback clbck = Root.getQuestionCallback();
+			
+			Root.getCallbackInjector().inject(clbck, client);
+			
+			success = Root.saveFile(info[0], info[1], info[2]);
 		
-		Root.getCallbackInjector().inject(clbck, client);
-		
-		boolean success = Root.saveFile(info[0], info[1], info[2]);
-		
-		
+		} while (!client.canApplicationBeClosed(success));
 		
 	}
 
