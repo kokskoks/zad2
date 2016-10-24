@@ -20,8 +20,15 @@ public class Main implements Client{
 
 	@Override
 	public String[] getInfo() {
-		// TODO Auto-generated method stub
-		return null;
+		String[] data = new String[3];
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Podaj nazwe");
+		data[0] = scanner.nextLine();
+		System.out.println("Podaj poprawny string:");
+		data[1] = scanner.nextLine();
+		System.out.println("Podaj niepoprawny string:");
+		data[2] = scanner.nextLine();
+		return data;
 	}
 
 }
