@@ -20,7 +20,7 @@ public class Main implements Client{
 		
 		Root.getCallbackInjector().inject(clbck, client);
 		
-		
+		boolean success = Root.saveFile(info[0], info[1], info[2]);
 		
 	}
 
