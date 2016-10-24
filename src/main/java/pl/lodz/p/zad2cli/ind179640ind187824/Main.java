@@ -44,6 +44,7 @@ public class Main implements Client{
 		return data;
 	}
 	
+	@Override
 	public boolean tryToCloseApplication(){
 		
 		return false;
