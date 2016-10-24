@@ -5,7 +5,7 @@ import java.util.Scanner;
 import pl.lodz.p.zad2.ind179640ind187824.CallbackInjectable;
 import pl.lodz.p.zad2.ind179640ind187824.QuestionCallback;
 
-public class Main implements CallbackInjectable, Client{
+public class Main implements Client{
 	
 	private QuestionCallback callback;
 	
