@@ -11,6 +11,8 @@ public class Main implements Client{
 	
 	public static void main(String... args){
 		
+		Client client = new Main();
+		
 	}
 
 	public void setCallback(QuestionCallback callback) {
