@@ -2,7 +2,8 @@ package pl.lodz.p.zad2cli.ind179640ind187824;
 
 import java.util.Scanner;
 
-import pl.lodz.p.zad2.ind179640ind187824.CallbackInjectable;
+import javax.swing.JFrame;
+
 import pl.lodz.p.zad2.ind179640ind187824.QuestionCallback;
 import pl.lodz.p.zad2.ind179640ind187824.Root;
 
@@ -10,9 +11,13 @@ public class Main implements Client{
 	
 	private QuestionCallback callback;
 	
+	private JFrame inputDialog;
+	
 	public static void main(String... args){
 		
 		Client client = new Main();
+		
+		
 		
 		boolean success = false;
 		
@@ -57,6 +62,16 @@ public class Main implements Client{
 		}
 		
 		return closeApplication;
+	}
+
+	@Override
+	public JFrame getJFrameInstance() {
+		
+		return inputDialog;
+	}
+	
+	public void setInputDialog(JFrame inputDialog){
+		this.inputDialog = inputDialog;
 	}
 
 }
