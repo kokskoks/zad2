@@ -1,11 +1,15 @@
 package pl.lodz.p.zad2cli.ind179640ind187824;
 
+import java.awt.GridLayout;
 import java.util.Scanner;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 import pl.lodz.p.zad2.ind179640ind187824.QuestionCallback;
-import pl.lodz.p.zad2.ind179640ind187824.Root;
 
 public class ClientImpl implements Client {
 	
@@ -20,7 +24,35 @@ public class ClientImpl implements Client {
 	
 
 	private void init() {
+		inputDialog = new JFrame();
+
+		JLabel fileNameLabel = new JLabel("File name:");
+		JTextField fileNameText = new JTextField();
 		
+		JLabel correctTextLabel = new JLabel("Correct text:");
+	    JTextField correctText = new JTextField();
+	    
+	    JLabel wrongTextLabel = new JLabel("Wrong text:");
+	    JTextField wrongText = new JTextField();
+	    
+
+
+	    JPanel panel = new JPanel(new GridLayout(0, 1));
+	    
+	    panel.add(fileNameLabel);
+	    panel.add(fileNameText);
+	    
+	    panel.add(correctTextLabel);
+	    panel.add(correctText);
+	    
+	    panel.add(wrongTextLabel);
+	    panel.add(wrongText);
+
+
+	    
+	    inputDialog.setContentPane(panel);
+	    
+	    inputDialog.setVisible(true);
 		
 	}
 
@@ -31,18 +63,6 @@ public class ClientImpl implements Client {
 		this.callback = callback;
 	}
 
-	@Override
-	public String[] getInfo() {
-		String[] data = new String[3];
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("Podaj nazwe");
-		data[0] = scanner.nextLine();
-		System.out.println("Podaj poprawny string:");
-		data[1] = scanner.nextLine();
-		System.out.println("Podaj niepoprawny string:");
-		data[2] = scanner.nextLine();
-		return data;
-	}
 	
 	@Override
 	public boolean canApplicationBeClosed(boolean success){
@@ -61,5 +81,6 @@ public class ClientImpl implements Client {
 		
 		return inputDialog;
 	}
+	
 	
 }
