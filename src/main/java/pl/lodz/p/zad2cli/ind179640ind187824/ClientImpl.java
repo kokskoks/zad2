@@ -77,12 +77,11 @@ public class ClientImpl implements Client {
 		this.callback = callback;
 		
 		inputDialog.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
-		
-		Window window = SwingUtilities.windowForComponent(inputDialog);
+
 		
 		WindowListener windowListener = createWindowClosingListener();
 		
-		window.addWindowListener(windowListener);
+		inputDialog.addWindowListener(windowListener);
 	}
 
 	
@@ -94,9 +93,9 @@ public class ClientImpl implements Client {
 				
 				boolean success = Root.saveFile(fileNameText.getText(), correctText.getText(), wrongText.getText());
 				
-				boolean close = callback.doRetry(success);
+				boolean retry = callback.doRetry(success);
 				
-				if(close){
+				if(!retry){
 					inputDialog.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 				} 
 				
@@ -122,7 +121,7 @@ public class ClientImpl implements Client {
 		return closeApplication;
 	}
 
-	@Override
+	//@Override
 	public JFrame getJFrameInstance() {
 		
 		return inputDialog;
