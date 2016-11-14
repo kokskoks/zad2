@@ -98,7 +98,7 @@ public class ClientImpl implements Client, MainApplicationAccessorCallback {
 				
 				success = Root.saveFile(fileNameText.getText(), correctText.getText(), wrongText.getText());
 				
-				boolean retry = callback.doRetry(success);
+				boolean retry = callback.doRetry(ClientImpl.this);
 				
 				if(!retry){
 					inputDialog.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -120,7 +120,7 @@ public class ClientImpl implements Client, MainApplicationAccessorCallback {
 		boolean closeApplication = false;
 		
 		if(callback!=null){
-			closeApplication = !callback.doRetry(success);
+			closeApplication = !callback.doRetry(this);
 		}
 		
 		return closeApplication;
