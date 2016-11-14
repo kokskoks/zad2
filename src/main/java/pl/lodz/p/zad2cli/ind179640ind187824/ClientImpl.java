@@ -12,10 +12,11 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 
+import pl.lodz.p.zad2.ind179640ind187824.MainApplicationAccessorCallback;
 import pl.lodz.p.zad2.ind179640ind187824.QuestionCallback;
 import pl.lodz.p.zad2.ind179640ind187824.Root;
 
-public class ClientImpl implements Client {
+public class ClientImpl implements Client, MainApplicationAccessorCallback {
 	
     private QuestionCallback callback;
 	
@@ -125,6 +126,22 @@ public class ClientImpl implements Client {
 	public JFrame getJFrameInstance() {
 		
 		return inputDialog;
+	}
+
+
+
+	@Override
+	public String[] getInputData() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+
+	@Override
+	public boolean getSaveResult() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 	
 	
