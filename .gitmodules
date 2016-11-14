@@ -1,0 +1,3 @@
+[submodule "zad2_jar"]
+	path = zad2_jar
+	url = https://github.com/lukasz-switon/zad2_jar.git
