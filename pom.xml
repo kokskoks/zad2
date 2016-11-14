@@ -11,7 +11,7 @@
 			<artifactId>zad2jarSource</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 			<scope>system</scope>
-			<systemPath>${project.basedir}/lib/MysteriousLibrary-jar-with-dependencies.jar</systemPath>
+			<systemPath>${project.basedir}/zad2_jar/MysteriousLibrary-jar-with-dependencies.jar</systemPath>
 		</dependency>
 	</dependencies>
 </project>
