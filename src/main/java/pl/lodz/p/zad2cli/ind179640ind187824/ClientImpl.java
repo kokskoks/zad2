@@ -28,6 +28,8 @@ public class ClientImpl implements Client, MainApplicationAccessorCallback {
 
 	private JTextField wrongText;
 	
+	private boolean success;
+	
 	public void showDialog(){
 		init();
 	}
@@ -89,10 +91,12 @@ public class ClientImpl implements Client, MainApplicationAccessorCallback {
 	private WindowListener createWindowClosingListener() {
 		
 		WindowListener windowListener = new WindowAdapter(){
+			
+
 			@Override
 			public void windowClosing(WindowEvent e) {
 				
-				boolean success = Root.saveFile(fileNameText.getText(), correctText.getText(), wrongText.getText());
+				success = Root.saveFile(fileNameText.getText(), correctText.getText(), wrongText.getText());
 				
 				boolean retry = callback.doRetry(success);
 				
@@ -132,16 +136,14 @@ public class ClientImpl implements Client, MainApplicationAccessorCallback {
 
 	@Override
 	public String[] getInputData() {
-		// TODO Auto-generated method stub
-		return null;
+		return new String[]{fileNameText.getText(), correctText.getText(), wrongText.getText()};
 	}
 
 
 
 	@Override
 	public boolean getSaveResult() {
-		// TODO Auto-generated method stub
-		return false;
+		return success;
 	}
 	
 	
